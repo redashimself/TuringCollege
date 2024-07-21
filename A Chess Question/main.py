@@ -70,12 +70,8 @@ def create_chess_board():
     return board
 
 
-def split_user_input(user_input):
-    return user_input.split(" ")
-
-
 def map_number_to_board_row_coordinate(user_input):
-    board_row = int(split_user_input(user_input)[1][1])
+    board_row = int(user_input.split()[1][1])
     actual_row = abs(board_row - 8)
 
     return actual_row
