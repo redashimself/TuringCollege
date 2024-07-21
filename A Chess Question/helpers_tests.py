@@ -1,9 +1,9 @@
-from main import map_letter_to_board_column_coordinate
-from main import map_number_to_board_row_coordinate
-from main import place_piece
-from main import create_chess_board
-from main import process_piece_placement_input
-from main import can_take
+from helpers import map_letter_to_board_column_coordinate
+from helpers import map_number_to_board_row_coordinate
+from helpers import place_piece
+from helpers import create_chess_board
+from helpers import process_piece_placement_input
+from helpers import can_take
 
 
 def test_map_letter_to_board_column_coordinate():
