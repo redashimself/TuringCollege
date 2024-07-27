@@ -24,7 +24,7 @@ def main():
     # Check which black pieces can be taken
     can_be_taken = []
     for row, col, piece in black_pieces:
-        if can_take(white_piece, (white_row, white_col), (row, col)):
+        if can_take(chess_board, white_piece, (white_row, white_col), (row, col)):
             can_be_taken.append(f"{piece} at {Column(col).name}{8 - row}")
 
     if can_be_taken:
@@ -37,3 +37,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# We assume the input from the user is valid, in terms of piece names,
+# coordinates and not putting the piece out of bounds/in the same place. Therefore, we do not validate for this.
+# Also, we assume the user is on the white side and our coordinate logic accounts for this

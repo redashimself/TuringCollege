@@ -1,13 +1,6 @@
 from column_coordinate import Column
 
 
-def map_letter_to_board_column_coordinate(user_input):
-    user_input_split = user_input.split(" ")
-    column_letter = user_input_split[1][0]
-    column = Column[column_letter].value
-    return column
-
-
 def create_chess_board():
     board = []
     for row in range(8):
@@ -23,12 +16,6 @@ def create_chess_board():
     return board
 
 
-def map_number_to_board_row_coordinate(user_input):
-    board_row = int(user_input.split()[1][1])
-    actual_row = abs(board_row - 8)
-    return actual_row
-
-
 def process_piece_placement_input(user_input):
     piece_name, coordinate = user_input.split()
     column_letter, row_number = coordinate[0], int(coordinate[1])
@@ -42,17 +29,46 @@ def place_piece(chess_board, row, column, piece, color):
     chess_board[row][column]['color'] = color
 
 
-def can_take(white_piece, white_pos, black_pos):
+def can_take(chess_board, white_piece, white_pos, black_pos):
+    if white_piece == "Knight":
+        return can_knight_take(white_pos, black_pos)
+    elif white_piece == "Rook":
+        return can_rook_take(chess_board, white_pos, black_pos)
+    return False
+
+
+def can_knight_take(white_pos, black_pos):
     white_row, white_col = white_pos
     black_row, black_col = black_pos
+    row_diff = abs(white_row - black_row)
+    col_diff = abs(white_col - black_col)
+    return (row_diff == 2 and col_diff == 1) or (row_diff == 1 and col_diff == 2)
 
-    if white_piece == "Knight":
-        return (abs(white_row - black_row) == 2 and abs(white_col - black_col) == 1) or \
-            (abs(white_row - black_row) == 1 and abs(white_col - black_col) == 2)
-    elif white_piece == "Rook":
-        return white_row == black_row or white_col == black_col
 
+def can_rook_take(chess_board, white_pos, black_pos):
+    white_row, white_col = white_pos
+    black_row, black_col = black_pos
+    if white_row == black_row:
+        return is_horizontal_path_clear(chess_board, white_row, white_col, black_col)
+    elif white_col == black_col:
+        return is_vertical_path_clear(chess_board, white_col, white_row, black_row)
     return False
+
+
+def is_horizontal_path_clear(chess_board, row, start_col, end_col):
+    start, end = min(start_col, end_col), max(start_col, end_col)
+    for col in range(start + 1, end):
+        if chess_board[row][col]['piece'] is not None:
+            return False
+    return True
+
+
+def is_vertical_path_clear(chess_board, col, start_row, end_row):
+    start, end = min(start_row, end_row), max(start_row, end_row)
+    for row in range(start + 1, end):
+        if chess_board[row][col]['piece'] is not None:
+            return False
+    return True
 
 
 def get_white_piece():
