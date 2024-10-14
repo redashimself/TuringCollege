@@ -19,10 +19,23 @@ def lowercase_data(data):
     return data
 
 
+import pandas as pd
+
 def convert_metric_prefix_to_numeric(column):
     def convert_value(value):
-        if isinstance(value, str):
+        if not isinstance(value, str):
+            return pd.to_numeric(value, errors='coerce')
+        
+        value = value.lower()
+        if 'k' in value:
             value = value.replace('k', '')
-        return pd.to_numeric(value, errors='coerce') * 1000
+            factor = 1000
+        elif 'm' in value:
+            value = value.replace('m', '')
+            factor = 1000000
+        else:
+            factor = 1
+
+        return pd.to_numeric(value, errors='coerce') * factor
 
     return column.apply(convert_value)
