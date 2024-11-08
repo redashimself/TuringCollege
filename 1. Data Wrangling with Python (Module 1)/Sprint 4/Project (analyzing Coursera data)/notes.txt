@@ -1,0 +1,49 @@
+
+What is the difference between difference certification types?
+Course:
+
+This is the most basic unit of learning on Coursera.
+It's a single, self-contained educational program focused on a specific topic or skill.
+Courses typically last 4-6 weeks and include video lectures, quizzes, and assignments.
+Upon completion, you receive a Course Certificate.
+
+
+Specialization:
+
+A Specialization is a series of related courses designed to build a comprehensive skill set in a specific area.
+It usually consists of 3-10 individual courses that build upon each other.
+Often includes a hands-on project to apply the skills learned.
+Upon completing all courses and the project, you earn a Specialization Certificate.
+
+
+Professional Certificate:
+
+Professional Certificates are programs designed to prepare you for a specific career or professional exam.
+They're typically created in partnership with a company or industry leader.
+These tend to be more applied and job-focused than Specializations.
+They often include hands-on projects that simulate real-world job tasks.
+Upon completion, you earn a Professional Certificate, which can be a valuable credential for job seekers.
+
+Course:
+
+This is the most basic unit of learning on Coursera.
+It's a single, self-contained educational program focused on a specific topic or skill.
+Courses typically last 4-6 weeks and include video lectures, quizzes, and assignments.
+Upon completion, you receive a Course Certificate.
+
+
+Specialization:
+
+A Specialization is a series of related courses designed to build a comprehensive skill set in a specific area.
+It usually consists of 3-10 individual courses that build upon each other.
+Often includes a hands-on project to apply the skills learned.
+Upon completing all courses and the project, you earn a Specialization Certificate.
+
+
+Professional Certificate:
+
+Professional Certificates are programs designed to prepare you for a specific career or professional exam.
+They're typically created in partnership with a company or industry leader.
+These tend to be more applied and job-focused than Specializations.
+They often include hands-on projects that simulate real-world job tasks.
+Upon completion, you earn a Professional Certificate, which can be a valuable credential for job seekers.
