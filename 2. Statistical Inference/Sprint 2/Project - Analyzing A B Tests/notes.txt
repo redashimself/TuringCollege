@@ -1,0 +1,9 @@
+Check if you covered everything in
+https://www.coursera.org/learn/inferential-statistical-analysis-python/lecture/Fit5O/estimating-a-population-mean-with-confidence
+Module 2 essentially (week 2)
+
+What is IVQ?
+What is CLT?
+Remind: what is IQR - inter-quartile range
+What is Central Limit theorem?
+ 
