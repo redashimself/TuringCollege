@@ -20,8 +20,8 @@ A/B Test project: (transfer to DS notebook later)
     - [x] Report the estimated treatment effect
     - [x] compute the confidence interval
         - [x] analytically
-        - [x] using bootstrap
-        - [x] report both intervals
+        - [ ] using bootstrap
+        - [ ] report both intervals
     - [x] Describe clearly what your calculations imply and which decision you recommend
     - [x] Use visualizations to show differences in the metric between groups and confidence intervals
     - [ ] Create a dashboard with at least two plots
