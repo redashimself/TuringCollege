@@ -7,14 +7,24 @@ This repository contains analysis of A/B tests for two different business cases:
 ### Fast Food Marketing Campaign
 - `fast_food_marketing_campaign.ipynb`: Analysis of three promotional strategies
 - `fastfood_dashboard_data.csv`: Raw sales and promotion data
-- `promotion_summary_stats.csv`: Aggregated statistics
+- `promotion_summary_stats.csv`: Aggregated statistics 
 - [Dashboard](https://lookerstudio.google.com/reporting/04502a29-37c4-41de-b5cb-9b7300bb5763)
 
 #### Key Findings
-- Promotion 1 significantly outperformed Promotion 2 (+10.77k sales, p<0.001)
-- Promotion 1 showed better but not statistically significant results vs Promotion 3
-- Recommendation: Implement Promotion 1 due to consistent performance and higher sales
-- Sample size was well-balanced across 137 locations (43/47/47 split)
+Raw Performance:
+- Promotion 1 maintained highest stable sales (~55-60K)
+- Promotion 2 consistently underperformed (~40K)
+- Promotion 3 performed similarly to Promotion 1 but with more variability
+
+Statistical Results:
+- Significant difference between Promotion 1 vs 2 (+10.77K, p<0.001)
+- No significant difference between Promotion 1 vs 3 (+2.73K, p=0.128)
+- Well-balanced sample across 137 locations (43/47/47 split)
+
+Market Size Impact:
+- Performance gaps narrowed after market size weighting
+- Promotions 1 and 3 showed similar weighted performance
+- Recommendation: Implement Promotion 1, with Promotion 3 as viable alternative
 
 ### Cookie Cats Mobile Game
 - `analysis.py`: Core analysis functions
